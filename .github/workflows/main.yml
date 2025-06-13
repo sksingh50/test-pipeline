@@ -1,0 +1,30 @@
+name: CI/CD Simulation Pipeline
+
+on: none
+
+jobs:
+  simulate-workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Stage 1: Checkout
+      - name: ✅ Checkout Code
+        uses: actions/checkout@v4
+
+      # Stage 2: Setup Environment (Java or Node or both - simulated)
+      - name: 🛠️ Set up Environment
+        run: echo "Setting up Java 17 and Node.js environment..."
+
+      # Stage 3: Simulate Build
+      - name: 🏗️ Simulate Build
+        run: echo "Building Spring Boot and React applications..."
+
+      # Stage 4: Simulate Unit Tests
+      - name: 🧪 Simulate Tests
+        run: echo "Running unit tests for backend and frontend..."
+
+      # Stage 5: Simulate Deployment
+      - name: 🚀 Simulate Deploy
+        run: |
+          echo "Deploying backend to Azure App Service..."
+          echo "Deploying frontend to Azure Static Web Apps..."
