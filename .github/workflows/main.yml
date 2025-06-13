@@ -1,6 +1,8 @@
 name: CI/CD Simulation Pipeline
 
-on: none
+on:
+  workflow_dispatch:
+
 
 jobs:
   simulate-workflow:
